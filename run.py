@@ -25,7 +25,7 @@ def upload_file():
       f.save(os.path.join(app.config['UPLOAD_FOLDER'], file_name))
       return render_template('upload_scc.html')
 
-@app.route("/wallet", methods=["GET"])
+@app.route("/wallet")
 def load_wallet():
     data = {}
     wallet = arweave.Wallet(wallet_file_path)
@@ -41,9 +41,17 @@ def load_wallet():
 @app.route("/lastTransaction", methods=["GET"])
 def load_last_transaction():
     wallet = arweave.Wallet(wallet_file_path)
-    last_transaction_id = wallet.get_last_transaction_id()
-    last_transaction = Transaction(wallet, id=last_transaction_id)
-    status = last_transaction.get_status()
+    print("1")
+    try:
+        last_transaction_id = wallet.get_last_transaction_id()
+        print("2")
+        last_transaction = Transaction(wallet, id=last_transaction_id)
+        print("3")
+        status = last_transaction.get_status()
+        print("4")
+    except:
+        print("5")
+        status = "Error"
     data = {
         "id": last_transaction_id,
         "status": status
