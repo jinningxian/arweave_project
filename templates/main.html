@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+<body>
+    <!-- <div id="app">{{ message }}</div> -->
+    <p>Your Account Balance: {{data.balance}}</p>
+    <p>Your Last Transaction Id: {{data.last_id}}</p>
+    <p>Your Last Transaction Status: {{data.last_transaction_status}}</p>
+
+    <button id="upload" class="float-left submit-button" >upload New document</button>
+
+    <script type="text/javascript">
+        document.getElementById("upload").onclick = function () {
+            location.href = "www.yoursite.com";
+        };
+    </script>
+
+    <!-- <script>
+        Vue.createApp({
+          data() {
+            return {
+              message: 'Hello Vue!'
+            }
+          }
+        }).mount('#app')
+      </script> -->
+</body>
+</html>

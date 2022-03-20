@@ -2,7 +2,7 @@ import arweave
 from arweave.arweave_lib import Wallet, Transaction
 from arweave.transaction_uploader import get_uploader
 
-wallet_file_path = "./wallet_path/arweave-key-63zeIK4-rpSvH4BNVb7cEBEJWldTPOnTw2uaMaLs73M.json"
+wallet_file_path = "./token_used/arweave-key-GyltZDFsi09RVhGPoKKsIClHJ6-69yKdKz-mXFAS8fE.json"
 wallet = arweave.Wallet(wallet_file_path)
 
 # def getBalance(wallet_file_path):
@@ -20,7 +20,7 @@ with open('Python.pdf', 'r', encoding="latin-1") as mypdf:
     transaction.sign()
     transaction.send()
 
-    print(transaction)
+#     print(transaction)
 
-tx = Transaction(wallet, id="0x0000019436E494F0")
-tx.get_transaction()
+# tx = Transaction(wallet, id="x36ycSi3MMX9fWJwJ67mkNkyUeubyi0rMt9GDGAuUw30mfYNe0lnoA==")
+# tx.get_transaction()
