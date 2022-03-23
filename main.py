@@ -3,18 +3,18 @@ import arweave
 from arweave.arweave_lib import Wallet, Transaction
 from arweave.transaction_uploader import get_uploader
 
-wallet_file_path = "./token_used/arweave-key-GyltZDFsi09RVhGPoKKsIClHJ6-69yKdKz-mXFAS8fE.json"
+wallet_file_path = "./../token_used/arweave-key-GyltZDFsi09RVhGPoKKsIClHJ6-69yKdKz-mXFAS8fE.json"
 wallet = arweave.Wallet(wallet_file_path)
 
 
 # from arweave.arweave_lib import Wallet, Transaction
 # from arweave.transaction_uploader import get_uploader
 
-wallet = Wallet(wallet_file_path)
+# wallet = Wallet(wallet_file_path)
 
 with open("./msg.txt", "rb", buffering=0) as file_handler:
-    tx = Transaction(wallet, file_handler=file_handler, file_path="./msg.txt")
-    tx.add_tag('Content-Type', 'application/text')
+    tx = Transaction(wallet, to="JMdHSU4lSJ6tn_u5TncaAHDcB4vgzaId2As-2Nthd80", file_handler=file_handler, file_path="./msg.txt")
+    tx.add_tag('Content-Type', 'application/json')
     tx.sign()
 
     uploader = get_uploader(tx, file_handler)

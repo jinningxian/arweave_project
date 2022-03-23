@@ -10,27 +10,25 @@
 </head>
 <body>
     <!-- <div id="app">{{ message }}</div> -->
-    <p>Your Wallet Address: {{data.address}}</p>
+
+    <p>Your Wallet Address: <a href="https://viewblock.io/arweave/address/{{data.address}}">{{data.address}}</a></p>
     <p>Your Account Balance: {{data.balance}}</p>
     <p>Your Last Transaction Id: {{data.last_id}}</p>
     <p>Your Last Transaction Status: {{data.last_transaction_status}}</p>
 
     <button id="upload" class="float-left submit-button" >upload New document</button>
+    <br>
+    <button id="search" class="float-left submit-button" >search transaction</button>
 
     <script type="text/javascript">
         document.getElementById("upload").onclick = function () {
-            location.href = "www.yoursite.com";
+            location.href = "./upload";
+        };
+        document.getElementById("search").onclick = function () {
+            location.href = "./search";
         };
     </script>
 
-    <script>
-        Vue.createApp({
-          data() {
-            return {
-              message: 'Hello Vue!'
-            }
-          }
-        }).mount('#app')
-      </script>
+ 
 </body>
 </html>
