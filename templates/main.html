@@ -10,6 +10,7 @@
 </head>
 <body>
     <!-- <div id="app">{{ message }}</div> -->
+    <p>Your Wallet Address: {{data.address}}</p>
     <p>Your Account Balance: {{data.balance}}</p>
     <p>Your Last Transaction Id: {{data.last_id}}</p>
     <p>Your Last Transaction Status: {{data.last_transaction_status}}</p>
@@ -22,7 +23,7 @@
         };
     </script>
 
-    <!-- <script>
+    <script>
         Vue.createApp({
           data() {
             return {
@@ -30,6 +31,6 @@
             }
           }
         }).mount('#app')
-      </script> -->
+      </script>
 </body>
 </html>
