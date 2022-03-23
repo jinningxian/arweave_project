@@ -40,15 +40,18 @@ def key_logIn():
 
 @app.route("/wallet")
 def load_wallet():
-    global wallet
-    data = {}
-    data["balance"] = wallet.balance
-    last_transaction_id = wallet.get_last_transaction_id()
-    last_transaction = Transaction(wallet, id=last_transaction_id)
-    status = last_transaction.get_status()
-    data["last_id"] = last_transaction_id
-    data["last_transaction_status"] = status
-    data["address"] = wallet.address
+    try:
+        global wallet
+        data = {}
+        data["balance"] = wallet.balance
+        last_transaction_id = wallet.get_last_transaction_id()
+        last_transaction = Transaction(wallet, id=last_transaction_id)
+        status = last_transaction.get_status()
+        data["last_id"] = last_transaction_id
+        data["last_transaction_status"] = status
+        data["address"] = wallet.address
+    except:
+        return render_template("login.html")
     return render_template("main.html", data=data)
 
 
@@ -63,6 +66,7 @@ def load_last_transaction():
         status = last_transaction.get_status()
     except:
         status = "Error"
+        return render_template("login.html")
     data = {
         "id": last_transaction_id,
         "status": status
@@ -125,9 +129,8 @@ def upload_doc():
             "status": "Method not allow"
             }
     return render_template("upload_doc.html", data=data)
-@app.route("/upload")
+@app.route("/upload", methods=["GET"])
 def upload_doc_logging():
-    global wallet
     data = {"Status": "Prepare your document to upload"}
     return render_template("upload_doc.html", data = data)
 
@@ -141,9 +144,13 @@ def load_search():
 @app.route("/search", methods=["POST"])
 def do_search():
     data = {}
-    global wallet
+    
     id = dict(request.values)["id"]
-    tx = Transaction(wallet, id=id)
+    try:
+        global wallet
+        tx = Transaction(wallet, id=id)
+    except:
+        return render_template("login.html")
     try:
         result = tx.get_status()
         info = "Your data has been upload, you can click the link: https://viewblock.io/arweave/tx/"+str(id)
