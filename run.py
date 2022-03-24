@@ -15,7 +15,10 @@ wallet_file_path = "./key/key.json"
 global wallet 
 @app.route('/')
 def upload_files():
-    os.remove(os.path.join(app.config['KEY'], "key.json"))
+    try:
+        os.remove(os.path.join(app.config['KEY'], "key.json"))
+    except:
+        print("file has already been remove")
     return render_template('login.html')
 	
 @app.route('/uploader', methods = ['GET', 'POST'])
@@ -90,8 +93,9 @@ def upload_doc():
 
             global wallet
             with open(file_path_root, "rb", buffering=0) as file_handler:
-                tx = Transaction(wallet, file_handler=file_handler, file_path=file_path_root)
-                tx.add_tag('Content-Type', 'application/json')
+                tx = Transaction(wallet, to="arweave-key-GyltZDFsi09RVhGPoKKsIClHJ6-69yKdKz-mXFAS8fE", quantity=0.01, file_handler=file_handler, file_path=file_path_root)
+                # tx.add_tag('Content-Type', 'application/json')
+                tx.add_tag('Content-Type', 'application/octet-stream')
                 tx.sign()
                 print("Sign")
                 uploader = get_uploader(tx, file_handler)
@@ -112,8 +116,9 @@ def upload_doc():
             #     transaction = Transaction(wallet, data=pdf_string_data)
             #     transaction.sign()
             #     transaction.send()
-            data = {
-                        "status": "Transaction uploading",
+                print("Lodding ")
+                data = {
+                        "Status": "Transaction uploading",
                         "transaction_id": tx.id,
                         "URL": "https://viewblock.io/arweave/tx/"+tx.id
                     }
@@ -121,12 +126,16 @@ def upload_doc():
 
         except Exception as e:
             data = {
-                        "status": "Server error",
+                        "Status": "Server error",
+                        "transaction_id": None,
+                        "URL": None,
                         "detail": e
                     }
     else:
         data = {
-            "status": "Method not allow"
+            "Status": "Method not allow",
+            "transaction_id": None,
+            "URL": None
             }
     return render_template("upload_doc.html", data=data)
 @app.route("/upload", methods=["GET"])

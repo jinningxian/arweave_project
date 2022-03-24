@@ -12,9 +12,10 @@ wallet = arweave.Wallet(wallet_file_path)
 
 # wallet = Wallet(wallet_file_path)
 
-with open("./msg.txt", "rb", buffering=0) as file_handler:
-    tx = Transaction(wallet, to="JMdHSU4lSJ6tn_u5TncaAHDcB4vgzaId2As-2Nthd80", file_handler=file_handler, file_path="./msg.txt")
-    tx.add_tag('Content-Type', 'application/json')
+with open("./output-onlinerandomtools.txt", "rb", buffering=0) as file_handler:
+    tx = Transaction(wallet, to="JMdHSU4lSJ6tn_u5TncaAHDcB4vgzaId2As-2Nthd80", quantity=0.01,file_handler=file_handler, file_path="./output-onlinerandomtools.txt")
+    # tx = Transaction(wallet,file_handler=file_handler, file_path="./msg21.txt")
+    tx.add_tag('Content-Type', 'application/octet-stream')
     tx.sign()
 
     uploader = get_uploader(tx, file_handler)
@@ -49,4 +50,5 @@ with open("./msg.txt", "rb", buffering=0) as file_handler:
 #     print(transaction)
 
 # tx = Transaction(wallet, id="x36ycSi3MMX9fWJwJ67mkNkyUeubyi0rMt9GDGAuUw30mfYNe0lnoA==")
+# tx = Transaction(wallet, id=id)
 # tx.get_transaction()
