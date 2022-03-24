@@ -47,14 +47,15 @@ redirect to upload new documentation/transaction page
 allow user to upload new documentation/transaction (developing, as the last transaction status is always pending might due to ineffective AR amount)
 
 `GET /search`
+
 redirect to search for existed documentation/transaction page
 
 `POST /search`
-if documentation/record existed, it will return the link (with transaction record); otherwise, it will show the user with "We could not find your data"
 
 ## Things to Make IMPROVEMENT
 1. wallet loading is slow `GET /uploader` or `POST /uploader` , due to verify the wallet key
 2. get wallet balance and generate last transaction information is slow `GET /wallet` [if record is not found, the time of searching is longer]
 3. always need to keep track the transaction `POST /upload`, it might take longer time to upload your transaction; same for `POST /search`
+if documentation/record existed, it will return message with the link (with transaction record); otherwise, it will show the user with "We could not find your data" with return message
 
 
