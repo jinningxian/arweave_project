@@ -47,10 +47,11 @@ redirect to upload new documentation/transaction page
 allow user to upload new documentation/transaction (developing, as the last transaction status is always pending might due to ineffective AR amount)
 
 `GET /search`
+
 redirect to search for existed documentation/transaction page
 
 `POST /search`
+
 if documentation/record existed, it will return the link (with transaction record); otherwise, it will show the user with "We could not find your data"
 
-## Contributing
 
