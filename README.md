@@ -52,6 +52,6 @@ redirect to search for existed documentation/transaction page
 
 `POST /search`
 
-if documentation/record existed, it will return the link (with transaction record); otherwise, it will show the user with "We could not find your data"
+if documentation/record existed, it will return message with the link (with transaction record); otherwise, it will show the user with "We could not find your data" with return message
 
 
