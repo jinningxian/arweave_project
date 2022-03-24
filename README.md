@@ -16,20 +16,41 @@ pip install -U Flask
 python run.py
 ```
 
-### Request
+## Request
+### for anonymous
 `GET /`
-return you to log in based on your token json key
+
+redirect you to log in page (log in by key file), remove previous 
+[for security concern]
+
+`GET /uploader` or `POST /uploader` 
+
+allow server to read your token json key to redirect you to the wallet; if success log in, you will go to wallet page; otherwise, you will return to log in page 
+
+### for login user only
 
 `GET /wallet`
-return you with last transaction info(id, status) and wallet balance
 
-`GET /uploader`
-allow server to read your token json key to redirect you to the wallet
+return you with last transaction info(id, status) and wallet balance, wallet id
 
 `GET /lastTransaction`
-return you with last transaction id and status 
 
-`POST /upload_doc`
-allow user to upload new documentation (developing, as the last transaction status is always pending might due to ineffective AR amount)
+return you with last transaction id and status; if status is pending, which means we could not find the record in database (either transaction is still uploading or transaction doesn't upload)
+
+`GET /upload`
+
+redirect to upload new documentation/transaction page 
+
+
+`POST /upload`
+
+allow user to upload new documentation/transaction (developing, as the last transaction status is always pending might due to ineffective AR amount)
+
+`GET /search`
+redirect to search for existed documentation/transaction page
+
+`POST /search`
+if documentation/record existed, it will return the link (with transaction record); otherwise, it will show the user with "We could not find your data"
+
 ## Contributing
 
