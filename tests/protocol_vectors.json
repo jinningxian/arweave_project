@@ -1,0 +1,192 @@
+{
+  "chunks": [
+    {
+      "chunks": [],
+      "data_root": "c7d6d46ef2f289196c38ea8294d90a5742c0a2115df8f7d77dbfd7a18a2c7d02",
+      "proofs": [],
+      "size": 0
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+          "max_byte_range": 1,
+          "min_byte_range": 0
+        }
+      ],
+      "data_root": "1edff26615c60435197cbbf8383eb07bb164ae37290e918fc1064466010955f9",
+      "proofs": [
+        {
+          "offset": 0,
+          "proof": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d0000000000000000000000000000000000000000000000000000000000000001"
+        }
+      ],
+      "size": 1
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "09fed9cbfb98b6ab0f3e8ff63b7b1f9b0e07d58b225295c78fdc023cc4985a72",
+          "max_byte_range": 32768,
+          "min_byte_range": 0
+        }
+      ],
+      "data_root": "6b9f36c92d8fcae599a5099f0358f9ecea165002eecf3484b8d789bd95e20ba5",
+      "proofs": [
+        {
+          "offset": 32767,
+          "proof": "09fed9cbfb98b6ab0f3e8ff63b7b1f9b0e07d58b225295c78fdc023cc4985a720000000000000000000000000000000000000000000000000000000000008000"
+        }
+      ],
+      "size": 32768
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "067ccdeccdcd73938e58ab56ed6a497dbcf95163d4a2e7cb03ee232499dce995",
+          "max_byte_range": 262143,
+          "min_byte_range": 0
+        }
+      ],
+      "data_root": "bb3362665f76243d53b55449a44ea742dbe6a4b06ef0f27f08be54b1f8d1d898",
+      "proofs": [
+        {
+          "offset": 262142,
+          "proof": "067ccdeccdcd73938e58ab56ed6a497dbcf95163d4a2e7cb03ee232499dce995000000000000000000000000000000000000000000000000000000000003ffff"
+        }
+      ],
+      "size": 262143
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "31a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be",
+          "max_byte_range": 262144,
+          "min_byte_range": 0
+        }
+      ],
+      "data_root": "82dcbb281d9b68b169ece1b1b95db005e5f7362a694b5b4d56530e66bc88ab9a",
+      "proofs": [
+        {
+          "offset": 262143,
+          "proof": "6198bb5df28fa393d160ff579ccfe849c2a5109e428a078c6c1d6fed612ca1f93549e60815a79f64ab354990f05fcaf329493484595b1174f5d87144e659e734000000000000000000000000000000000000000000000000000000000004000031a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be0000000000000000000000000000000000000000000000000000000000040000"
+        }
+      ],
+      "size": 262144
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "dd84db969f4ff2abb79c8c2fbc06e8d8e02c46d6481c958e057f7ad7a24c58a7",
+          "max_byte_range": 131073,
+          "min_byte_range": 0
+        },
+        {
+          "data_hash": "e914b8da50e58a4b7fa8ede04ccb3b56d997cc2bb4e4e44bda4daa42820da710",
+          "max_byte_range": 262145,
+          "min_byte_range": 131073
+        }
+      ],
+      "data_root": "9092a437a41601c50cfd6414c5e3579e7c0acb47e9ee6c9434da1be9736538f0",
+      "proofs": [
+        {
+          "offset": 131072,
+          "proof": "3522998c9302be7ad514070cfc5d188392fdba3f0f4c4b3deab42afbf48b53619b6fdc47e6a8b606265cca4fc1718f54a4ca436a8489c145eb6e29f1b2862e850000000000000000000000000000000000000000000000000000000000020001dd84db969f4ff2abb79c8c2fbc06e8d8e02c46d6481c958e057f7ad7a24c58a70000000000000000000000000000000000000000000000000000000000020001"
+        },
+        {
+          "offset": 262144,
+          "proof": "3522998c9302be7ad514070cfc5d188392fdba3f0f4c4b3deab42afbf48b53619b6fdc47e6a8b606265cca4fc1718f54a4ca436a8489c145eb6e29f1b2862e850000000000000000000000000000000000000000000000000000000000020001e914b8da50e58a4b7fa8ede04ccb3b56d997cc2bb4e4e44bda4daa42820da7100000000000000000000000000000000000000000000000000000000000040001"
+        }
+      ],
+      "size": 262145
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "31a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be",
+          "max_byte_range": 262144,
+          "min_byte_range": 0
+        },
+        {
+          "data_hash": "e31bdc63577fe76f6441014aaaa2226d9ffce11b44d0d510cade132b79fd7d76",
+          "max_byte_range": 524288,
+          "min_byte_range": 262144
+        }
+      ],
+      "data_root": "1f66cd9af7edcc094841755809eb45b09f5fd2ea02e02d856df8af653452caa2",
+      "proofs": [
+        {
+          "offset": 262143,
+          "proof": "70c41e98c328b6cfcd30b8d8c79f8d876bbbb009e6b27e1af04c081c9be7042103225dccb8fb02f664a73ad07348fcdc332cba36f1015ad5d42be7a398e45c5000000000000000000000000000000000000000000000000000000000000800006198bb5df28fa393d160ff579ccfe849c2a5109e428a078c6c1d6fed612ca1f9c46f9e96e440509bb4dab15bb6543aa5109397c7a8c2f3315771c7c0a6cbda20000000000000000000000000000000000000000000000000000000000004000031a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be0000000000000000000000000000000000000000000000000000000000040000"
+        },
+        {
+          "offset": 524287,
+          "proof": "70c41e98c328b6cfcd30b8d8c79f8d876bbbb009e6b27e1af04c081c9be7042103225dccb8fb02f664a73ad07348fcdc332cba36f1015ad5d42be7a398e45c5000000000000000000000000000000000000000000000000000000000000800006198bb5df28fa393d160ff579ccfe849c2a5109e428a078c6c1d6fed612ca1f9c46f9e96e440509bb4dab15bb6543aa5109397c7a8c2f3315771c7c0a6cbda200000000000000000000000000000000000000000000000000000000000040000e31bdc63577fe76f6441014aaaa2226d9ffce11b44d0d510cade132b79fd7d760000000000000000000000000000000000000000000000000000000000080000"
+        }
+      ],
+      "size": 524288
+    },
+    {
+      "chunks": [
+        {
+          "data_hash": "31a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be",
+          "max_byte_range": 262144,
+          "min_byte_range": 0
+        },
+        {
+          "data_hash": "4cd11d3283253789fd4a16b3ec2f25bab63aadff5025ff544300afbdb338730a",
+          "max_byte_range": 393217,
+          "min_byte_range": 262144
+        },
+        {
+          "data_hash": "252cdb5f7f7fe949a2526d08b992ba693d8ad0ecd6ff0d5936b8e9d7ecaf4e6f",
+          "max_byte_range": 524289,
+          "min_byte_range": 393217
+        }
+      ],
+      "data_root": "59c5fc980e16cae7acb9753bf5be0a0ae0d94781c496a0d9dd89786e71fdbd33",
+      "proofs": [
+        {
+          "offset": 262143,
+          "proof": "391e5f1969e1e44621a38e02f84c8287e77dd9bed8d4660f6678d7a44cce3b424bd1a8c3175773198191a9fce529c0412c453900fb6eafc1ef1d829e2e126d5200000000000000000000000000000000000000000000000000000000000600016198bb5df28fa393d160ff579ccfe849c2a5109e428a078c6c1d6fed612ca1f9beb72b5c0da436390db0b45fb4a7089cb6668c9146101e2d2dec2fe72be12c8b000000000000000000000000000000000000000000000000000000000004000031a1f9dea0169551092d05e8bf4a446228c8c3eb4c9b713c66adcb7fd53c89be0000000000000000000000000000000000000000000000000000000000040000"
+        },
+        {
+          "offset": 393216,
+          "proof": "391e5f1969e1e44621a38e02f84c8287e77dd9bed8d4660f6678d7a44cce3b424bd1a8c3175773198191a9fce529c0412c453900fb6eafc1ef1d829e2e126d5200000000000000000000000000000000000000000000000000000000000600016198bb5df28fa393d160ff579ccfe849c2a5109e428a078c6c1d6fed612ca1f9beb72b5c0da436390db0b45fb4a7089cb6668c9146101e2d2dec2fe72be12c8b00000000000000000000000000000000000000000000000000000000000400004cd11d3283253789fd4a16b3ec2f25bab63aadff5025ff544300afbdb338730a0000000000000000000000000000000000000000000000000000000000060001"
+        },
+        {
+          "offset": 524288,
+          "proof": "391e5f1969e1e44621a38e02f84c8287e77dd9bed8d4660f6678d7a44cce3b424bd1a8c3175773198191a9fce529c0412c453900fb6eafc1ef1d829e2e126d520000000000000000000000000000000000000000000000000000000000060001252cdb5f7f7fe949a2526d08b992ba693d8ad0ecd6ff0d5936b8e9d7ecaf4e6f0000000000000000000000000000000000000000000000000000000000080001"
+        }
+      ],
+      "size": 524289
+    }
+  ],
+  "deep_hash": [
+    "fbf00cc444f5fea9dc3bedf62a13fba8ae87e7445fc910567a23bec4eb82fadb1143c433069314d8362983dc3c2e4a38",
+    "33ab2407a6c328c0bc1bbe5971f49af5c1908985f83c3d2bd89a9e221dd8b068dc61ce968ba3f9ab12d5361ba3944382",
+    "a69e7d37fdc7f040a9ec16aae84de24fab4a653dac4de0bd247e36bab9fe45d9289c5a04a893c95285812f5cefc9707a",
+    "fa2bde5350ff2fc0feb04dc78dfa7f02e7d71e39ccefdb645909c6add73a13284bbb2c494d825be877843901ebf53d80"
+  ],
+  "external_requests": 0,
+  "package_lock_sha256": "dd75cb0e4f3e60293873a698b5b0be72f81823301ccc5fc0ee7e48da70d42e4c",
+  "reference": "arweave@2.1.0",
+  "transaction": {
+    "data_root": "kJKkN6QWAcUM_WQUxeNXnnwKy0fp7myUNNob6XNlOPA",
+    "last_tx": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+    "payload_pattern": "index_mod_251",
+    "payload_size": 262145,
+    "public_jwk": {
+      "e": "AQAB",
+      "key_ops": [
+        "verify"
+      ],
+      "kty": "RSA",
+      "n": "pyDa9RNdU7e6H9ATzhdKXLHC6l7ea9GWQdEFgjtNIbQWaTluie9GTyTbSnGL_RBTqrju6bMrFpZcH7C8eZZc0_dTLM4-yoK3VPryKUEuI1CrTfyTG0hmKh61YpLROoVRmUMmqigVWQdQw1AifeR1YX6IB8WdPDtjcnGtDv5uCKg0HKxmArsT-NEn34iLoOvgVW73Ay23azBQ30bQLX6V_MDLaSghpgBf8O6uCv4cpx2vjs9tzNpwYsMS_TeggW7k6BAywkfYQdxYWv9NxeJCBwZ3cZv-8Wlo3pyPUUTcmq9XqDrtfHdW7Xl_ZapdEhMIGr6_zd9zqmnZrXvwcGeGPQ"
+    },
+    "reward": "1234",
+    "signature_data_hex": "eefc76d3af8b05876214dc1a91b3d0ca6b53b8a62e76ec4334d23830c0d0bc8bb9ff0ca6e68f60ebada1728707b5224b",
+    "tag_name": "Content-Type",
+    "tag_value": "application/octet-stream"
+  }
+}
