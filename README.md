@@ -1,7 +1,7 @@
 # arweave_project
 
 `arweave_project` is a small Flask application for inspecting an Arweave
-wallet and uploading documents. Version **0.0.1** vendors the eight public
+wallet and uploading documents. Version **0.0.2** vendors the eight public
 modules the application uses from `arweave-python-client` 1.0.19 and replaces
 its vulnerable `python-jose`/`ecdsa` dependency path with a strict RSA-only
 adapter. See [`arweave/UPSTREAM.md`](arweave/UPSTREAM.md) for byte-level
@@ -63,8 +63,8 @@ SHA-384 SRI.
   resume; reconcile remotely before any manual resend.
 - Missing `id` on `/search` and missing `token` on `/test1` retain their legacy
   HTTP 500 behavior.
-- `templates/main.html` still contains an unpinned Vue CDN reference outside
-  this Bootstrap-only increment.
+- The unused floating Vue script has been removed from the wallet page. Its
+  inline JavaScript, forms and server-rendered fields retain the same behavior.
 - Native/runtime coverage is not a whole-repository zero claim. Remaining
   boundaries include CPython/base OS, OpenSSL/libffi, cffi, cryptography,
   PyCryptodome, MarkupSafe and charset-normalizer.
