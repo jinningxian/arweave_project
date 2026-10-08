@@ -1,4 +1,4 @@
-# Security handover — 0.0.1
+# Security handover — 0.0.2
 
 This release candidate is an incremental dependency and protocol-hardening
 batch. It does not claim whole-repository or native-runtime vulnerability zero,
@@ -46,9 +46,27 @@ Final validation and independent review must bind the post-closeout snapshot.
    fields. Their original bytes, paths and RECORD coverage are validated and
    reported as a conformance residual.
 4. Missing `/search` `id` and `/test1` `token` still produce legacy HTTP 500.
-5. `templates/main.html` retains an out-of-scope unpinned Vue CDN reference.
+5. The unused floating Vue reference in `templates/main.html` is removed. The
+   page has no Vue API or directive dependency.
 6. macOS, ARM, PyPy, older Python, real wallets, live provider delivery,
    deployment and production acceptance are unverified.
 
 Rollback is one normal Git revert of this batch. No wallet, transaction,
 upload, database, provider, account or production data migration is involved.
+
+## 0.0.2 unused external-script removal
+
+The wallet page no longer loads the unused, floating Vue development bundle.
+The exact template delta removes one script element; the original inline
+JavaScript and all other template bytes are preserved in canonical Git form.
+Functional validation checks the two existing handlers and same-origin
+navigations without Vue, plus all 21 Flask contract checks on both Windows and
+Linux CPython 3.13.16. No wallet/provider operation occurs.
+
+The first check retained a patch-tool terminal-newline mismatch; the template
+was rewritten as the exact base blob minus the single script line. A second
+harness check assumed an attribute-free inline script tag and was corrected
+with an attribute-aware parser. Neither check was waived. The complete corrected
+functional checks passed. This version/handover update expires that snapshot;
+post-closeout validation and a different reviewer follow the source lease release.
+All non-Vue residuals above remain.
